@@ -1,0 +1,8 @@
+bibentry(
+  bibtype = "Manual",
+  title   = "odumesl: ggplot2 Layers for H.T. Odum's Energy Systems Language",
+  author  = person("Eric", "Scheier"),
+  year    = 2026,
+  note    = "R package version 0.1.0",
+  url     = "https://github.com/ericscheier/odumesl"
+)

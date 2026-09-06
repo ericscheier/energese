@@ -1,0 +1,15 @@
+^\.Rproj\.user$
+^\.Rhistory$
+^\.RData$
+^\.Ruserdata$
+^\.DS_Store$
+^\.git$
+^\.github$
+^\.gitignore$
+^cran-comments\.md$
+^CRAN-SUBMISSION$
+^LICENSE\.md$
+^README\.Rmd$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
