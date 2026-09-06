@@ -1,0 +1,9 @@
+pandoc: 3.8.3
+pkgdown: 2.2.1
+pkgdown_sha: ~
+articles:
+  energese: energese.html
+last_built: 2026-09-06T02:19Z
+urls:
+  reference: https://ericscheier.github.io/energese/reference
+  article: https://ericscheier.github.io/energese/articles
