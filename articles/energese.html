@@ -39,6 +39,7 @@
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
 </form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/ericscheier/energese/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
@@ -55,7 +56,7 @@
       <h1>Getting started with energese</h1>
             
       
-
+      <small class="dont-index">Source: <a href="https://github.com/ericscheier/energese/blob/main/vignettes/energese.Rmd" class="external-link"><code>vignettes/energese.Rmd</code></a></small>
       <div class="d-none name"><code>energese.Rmd</code></div>
     </div>
 
@@ -77,7 +78,7 @@ reference chart</a> shows every ESL symbol Odum used.
 <code><a href="../reference/plot_energese_reference.html">plot_energese_reference()</a></code> renders the same chart directly
 from R:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">energese</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ericscheier/energese" class="external-link">energese</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/plot_energese_reference.html">plot_energese_reference</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Warning: Unknown or uninitialised column: `subgroup`.</span></span>
 <span><span class="co">#&gt; Warning: Unknown or uninitialised column: `linetype`.</span></span>
@@ -151,7 +152,7 @@ direction of energy flow (dashed connecting lines).</li>
 (carnivore), each with a heat-sink arrow to ground:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">energese</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ericscheier/energese" class="external-link">energese</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">nodes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
 <span>  x    <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,   <span class="fl">4</span>,     <span class="fl">7</span>,          <span class="fl">10</span><span class="op">)</span>,</span>

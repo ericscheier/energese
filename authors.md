@@ -6,6 +6,9 @@
 
 ## Citation
 
+Source:
+[`inst/CITATION`](https://github.com/ericscheier/energese/blob/main/inst/CITATION)
+
 Scheier E (2026). *energese: ggplot2 Layers for H.T. Odum's Energy
 Systems Language*. R package version 0.1.0,
 <https://github.com/ericscheier/energese>.
