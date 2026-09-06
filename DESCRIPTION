@@ -1,23 +1,24 @@
-Package: odumesl
+Package: energese
 Title: ggplot2 Layers for H.T. Odum's Energy Systems Language
 Version: 0.1.0
 Authors@R:
     person("Eric", "Scheier", email = "hello@emrgi.com", role = c("aut", "cre"))
-Description: Provides grammar-of-graphics 'ggplot2' layers for the seven
-    canonical symbols of H.T. Odum's Energy Systems Language (ESL): source
-    circles, producer bullet-nosed hexagons, consumer hexagons, storage
-    bullet-tanks, interaction diamonds, heat-sink triangles, and money
-    transaction nodes. Each symbol is exposed as a proper 'ggplot2'
-    'geom_*' with standard aesthetics ('x', 'y', 'width', 'height',
-    'fill', 'colour', 'alpha', 'linewidth'), vectorised over data rows,
-    composable in a 'ggplot()' pipeline. Enables ESL diagrams to be
-    authored programmatically and quantitatively overlaid on real data
-    — including onto the log-transformity spectral hierarchy used in
-    Odum's own diagrams. Low-level vertex helpers (returning tibbles
-    of polygon coordinates) are also exported for users who want to
-    hand-compose 'geom_polygon()' layers. See Brown (2004)
-    <doi:10.1016/j.ecolmodel.2003.12.008> for background on ESL
-    notation.
+Description: Provides grammar-of-graphics 'ggplot2' layers for the ten
+    canonical symbols of H.T. Odum's Energy Systems Language (ESL) —
+    also known as Energese: source circles, generic-flow arrows,
+    Bertalanffy-module storages, consumer hexagons, chevron interactions,
+    bullet-shaped producers, bowtie switches, semi-circular self-limiters,
+    heat-sink arrows to ground, and elongated-diamond money transactions.
+    Symbol geometry follows the canonical Wikipedia reference chart
+    <https://commons.wikimedia.org/wiki/File:Energese.jpg>, reproducible
+    from R via plot_energese_reference(). Each symbol is exposed as a
+    proper 'ggplot2' 'geom_*' with standard aesthetics ('x', 'y',
+    'width', 'height', 'fill', 'colour', 'alpha', 'linewidth'),
+    vectorised over data rows, composable in a 'ggplot()' pipeline.
+    Low-level vertex helpers (returning tibbles of polygon coordinates)
+    are also exported for users who want to hand-compose 'geom_polygon()'
+    layers. See Brown (2004) <doi:10.1016/j.ecolmodel.2003.12.008>
+    for background on ESL notation.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

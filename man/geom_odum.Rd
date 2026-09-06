@@ -5,16 +5,24 @@
 \alias{geom_odum}
 \alias{GeomOdumSource}
 \alias{geom_odum_source}
-\alias{GeomOdumProducer}
-\alias{geom_odum_producer}
-\alias{GeomOdumConsumer}
-\alias{geom_odum_consumer}
+\alias{GeomOdumFlow}
+\alias{geom_odum_flow}
 \alias{GeomOdumStorage}
 \alias{geom_odum_storage}
+\alias{GeomOdumConsumer}
+\alias{geom_odum_consumer}
 \alias{GeomOdumInteraction}
 \alias{geom_odum_interaction}
+\alias{GeomOdumProducer}
+\alias{geom_odum_producer}
+\alias{GeomOdumSwitch}
+\alias{geom_odum_switch}
+\alias{GeomOdumSelfLimiter}
+\alias{geom_odum_self_limiter}
 \alias{GeomOdumHeatSink}
 \alias{geom_odum_heat_sink}
+\alias{GeomOdumTransaction}
+\alias{geom_odum_transaction}
 \alias{GeomOdumMoney}
 \alias{geom_odum_money}
 \title{Odum ESL Geoms — ggplot2 layers for H.T. Odum's Energy Systems Language}
@@ -33,22 +41,9 @@ geom_odum_source(
   inherit.aes = TRUE
 )
 
-GeomOdumProducer
+GeomOdumFlow
 
-geom_odum_producer(
-  mapping = NULL,
-  data = NULL,
-  stat = "identity",
-  position = "identity",
-  ...,
-  na.rm = FALSE,
-  show.legend = NA,
-  inherit.aes = TRUE
-)
-
-GeomOdumConsumer
-
-geom_odum_consumer(
+geom_odum_flow(
   mapping = NULL,
   data = NULL,
   stat = "identity",
@@ -73,6 +68,19 @@ geom_odum_storage(
   inherit.aes = TRUE
 )
 
+GeomOdumConsumer
+
+geom_odum_consumer(
+  mapping = NULL,
+  data = NULL,
+  stat = "identity",
+  position = "identity",
+  ...,
+  na.rm = FALSE,
+  show.legend = NA,
+  inherit.aes = TRUE
+)
+
 GeomOdumInteraction
 
 geom_odum_interaction(
@@ -86,9 +94,63 @@ geom_odum_interaction(
   inherit.aes = TRUE
 )
 
+GeomOdumProducer
+
+geom_odum_producer(
+  mapping = NULL,
+  data = NULL,
+  stat = "identity",
+  position = "identity",
+  ...,
+  n = 20,
+  na.rm = FALSE,
+  show.legend = NA,
+  inherit.aes = TRUE
+)
+
+GeomOdumSwitch
+
+geom_odum_switch(
+  mapping = NULL,
+  data = NULL,
+  stat = "identity",
+  position = "identity",
+  ...,
+  na.rm = FALSE,
+  show.legend = NA,
+  inherit.aes = TRUE
+)
+
+GeomOdumSelfLimiter
+
+geom_odum_self_limiter(
+  mapping = NULL,
+  data = NULL,
+  stat = "identity",
+  position = "identity",
+  ...,
+  n = 30,
+  na.rm = FALSE,
+  show.legend = NA,
+  inherit.aes = TRUE
+)
+
 GeomOdumHeatSink
 
 geom_odum_heat_sink(
+  mapping = NULL,
+  data = NULL,
+  stat = "identity",
+  position = "identity",
+  ...,
+  na.rm = FALSE,
+  show.legend = NA,
+  inherit.aes = TRUE
+)
+
+GeomOdumTransaction
+
+geom_odum_transaction(
   mapping = NULL,
   data = NULL,
   stat = "identity",
@@ -116,53 +178,45 @@ geom_odum_money(
 \arguments{
 \item{mapping, data, stat, position, na.rm, show.legend, inherit.aes, ...}{Standard ggplot2 layer arguments.}
 
-\item{n}{Number of vertices for curved symbols (source, storage,
-money — default 60/20/60 respectively).}
+\item{n}{Vertex count for curved symbols.}
 }
 \value{
 A ggplot2 layer.
 }
 \description{
-Draws the canonical Odum ESL symbols (source circle, producer
-bullet-nosed hexagon, consumer hexagon, storage bullet-tank,
-interaction diamond, heat-sink triangle, money-transaction circle)
-as vectorized ggplot2 layers. Each symbol is placed at
-\code{aes(x, y)} with size controlled by \code{width} + \code{height}
-aesthetics, and takes the standard \code{fill}, \code{colour},
-\code{alpha}, \code{linewidth} aesthetics.
+A family of ten \code{ggplot2} Geoms that draw the canonical
+\strong{Energese} symbols — H.T. Odum's Energy Systems Language.
+Each Geom places one symbol per row of data at \code{aes(x, y)}
+with size controlled by \code{width} + \code{height} (or
+\code{radius}), and takes the standard \code{fill}, \code{colour},
+\code{alpha}, and \code{linewidth} aesthetics.
 }
 \details{
-Under the hood each Geom expands its data rows into polygon vertices
-via the low-level helpers (\code{\link{odum_producer}},
-\code{\link{odum_consumer}}, etc.) and delegates to
-\code{GeomPolygon} for drawing.
+Geometry follows the canonical reference chart on Wikipedia
+(\url{https://commons.wikimedia.org/wiki/File:Energese.jpg}).
 }
+\section{Symbols}{
+
+\itemize{
+\item \code{geom_odum_source()}       — filled circle (renewable / external input)
+\item \code{geom_odum_flow()}         — bare right-pointing arrow (generic energy flow)
+\item \code{geom_odum_storage()}      — Bertalanffy module (energy storage)
+\item \code{geom_odum_consumer()}     — hexagon (consumer / consumption)
+\item \code{geom_odum_interaction()}  — chevron (multiplicative junction)
+\item \code{geom_odum_producer()}     — bullet (autocatalytic producer)
+\item \code{geom_odum_switch()}       — bowtie (on/off logic gate)
+\item \code{geom_odum_self_limiter()} — semi-circle (saturating unit)
+\item \code{geom_odum_heat_sink()}    — down-arrow + ground line (dispersed heat)
+\item \code{geom_odum_transaction()}  — elongated diamond (money transaction)
+}
+}
+
 \section{Aesthetics}{
 
-Required: \code{x}, \code{y}. Optional (with defaults):
-\code{width} (default 0.8), \code{height} (default 0.5),
-\code{fill} (default \code{"grey70"}), \code{colour} (default
-\code{"black"}), \code{alpha} (default 0.85), \code{linewidth}
-(default 0.35). \code{geom_odum_source} and
-\code{geom_odum_money} take a \code{radius} aesthetic instead
-of \code{width}/\code{height}.
+Required: \code{x}, \code{y}. Optional (with sensible defaults):
+\code{width}, \code{height} for polygonal symbols;
+\code{radius} for source, money; \code{fill}, \code{colour},
+\code{alpha}, \code{linewidth}.
 }
 
-\examples{
-\dontrun{
-library(ggplot2)
-d <- data.frame(
-  x = c(0, 3, 6, 9, 12),
-  y = 0,
-  role = c("source", "producer", "consumer", "storage", "interaction"),
-  fill = c("#F1C40F", "#228B22", "#C0392B", "#1F77B4", "#F39C12"))
-ggplot(d, aes(x = x, y = y, fill = I(fill))) +
-  geom_odum_source(data = d[1, ], aes(radius = 0.4)) +
-  geom_odum_producer(data = d[2, ], aes(width = 1.5, height = 0.8)) +
-  geom_odum_consumer(data = d[3, ], aes(width = 1.5, height = 0.8)) +
-  geom_odum_storage(data = d[4, ], aes(width = 1.5, height = 0.8)) +
-  geom_odum_interaction(data = d[5, ], aes(width = 0.8, height = 0.8)) +
-  coord_fixed() + theme_void()
-}
-}
 \keyword{datasets}

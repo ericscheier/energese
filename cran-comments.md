@@ -2,9 +2,9 @@
 
 ## Release summary
 
-odumesl 0.1.0 — initial CRAN submission.
+energese 0.1.0 — initial CRAN submission.
 
-odumesl adds ggplot2 layers for the seven canonical symbols of
+energese adds ggplot2 layers for the seven canonical symbols of
 H.T. Odum's Energy Systems Language (source circles, producer
 bullet-nosed hexagons, consumer hexagons, storage bullet-tanks,
 interaction diamonds, heat-sink triangles, money transaction

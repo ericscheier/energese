@@ -1,4 +1,4 @@
 library(testthat)
-library(odumesl)
+library(energese)
 
-test_check("odumesl")
+test_check("energese")

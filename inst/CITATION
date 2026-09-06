@@ -1,8 +1,60 @@
 bibentry(
   bibtype = "Manual",
-  title   = "odumesl: ggplot2 Layers for H.T. Odum's Energy Systems Language",
+  title   = "energese: ggplot2 Layers for H.T. Odum's Energy Systems Language",
   author  = person("Eric", "Scheier"),
   year    = 2026,
   note    = "R package version 0.1.0",
-  url     = "https://github.com/ericscheier/odumesl"
+  url     = "https://github.com/ericscheier/energese",
+  header  = "To cite the energese package itself:"
+)
+
+bibentry(
+  bibtype = "Book",
+  title   = "A Tropical Rain Forest: A Study of Irradiation and Ecology at El Verde, Puerto Rico",
+  editor  = c(person("Howard T.", "Odum"),
+              person("Robert F.", "Pigeon")),
+  year    = 1970,
+  publisher = "U.S. Atomic Energy Commission, Division of Technical Information",
+  header  = "To cite the origin of ESL (Wikipedia notes this El Verde study as the birthplace of the language):"
+)
+
+bibentry(
+  bibtype = "Book",
+  title   = "Ecological and General Systems: An Introduction to Systems Ecology",
+  author  = person("Howard T.", "Odum"),
+  year    = 1994,
+  note    = "Revised edition",
+  publisher = "University Press of Colorado",
+  header  = "For the canonical ESL taxonomy:"
+)
+
+bibentry(
+  bibtype = "Book",
+  title   = "Modeling for All Scales: An Introduction to System Simulation",
+  author  = c(person("Howard T.", "Odum"),
+              person("Elisabeth C.", "Odum")),
+  year    = 2000,
+  publisher = "Academic Press",
+  header  = "For pictographic modelling technique:"
+)
+
+bibentry(
+  bibtype = "Book",
+  title   = "Environment, Power, and Society for the Twenty-First Century: The Hierarchy of Energy",
+  author  = person("Howard T.", "Odum"),
+  year    = 2007,
+  publisher = "Columbia University Press",
+  header  = "For the maximum-empower framing:"
+)
+
+bibentry(
+  bibtype = "Article",
+  title   = "A picture is worth a thousand words: energy systems language and simulation",
+  author  = person("Mark T.", "Brown"),
+  journal = "Ecological Modelling",
+  year    = 2004,
+  volume  = 178,
+  pages   = "83--100",
+  doi     = "10.1016/j.ecolmodel.2003.12.008",
+  header  = "For a modern review of ESL usage:"
 )
