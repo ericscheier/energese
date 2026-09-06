@@ -1,0 +1,35 @@
+url: https://ericscheier.github.io/energese/
+template:
+  bootstrap: 5
+  bslib:
+    primary: "#228B22"
+    base_font: {google: "Source Sans Pro"}
+    heading_font: {google: "Source Sans Pro"}
+    code_font: {google: "Fira Mono"}
+
+navbar:
+  structure:
+    left:  [intro, reference, articles, news]
+    right: [search, github]
+
+reference:
+  - title: "ggplot2 Geoms — canonical ESL symbols"
+    desc: >
+      Ten `ggplot2` layers corresponding to the ten canonical symbols
+      on Wikipedia's Energese reference chart.
+    contents:
+      - geom_odum
+  - title: "Reference chart"
+    desc: >
+      Reproduce Wikipedia's canonical Energese chart directly from R.
+    contents:
+      - plot_energese_reference
+  - title: "Low-level vertex helpers"
+    desc: >
+      Tibble-returning helpers for hand-composing polygons with
+      `geom_polygon()`, `gganimate`, or non-ggplot renderers.
+    contents:
+      - odum_symbols
+  - title: "Package"
+    contents:
+      - energese-package

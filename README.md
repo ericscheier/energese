@@ -1,6 +1,8 @@
 # energese · ggplot2 layers for H.T. Odum's Energy Systems Language
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/ericscheier/energese/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ericscheier/energese/actions/workflows/R-CMD-check.yaml)
+[![pkgdown](https://github.com/ericscheier/energese/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/ericscheier/energese/actions/workflows/pkgdown.yaml)
 [![CRAN status](https://www.r-pkg.org/badges/version/energese)](https://CRAN.R-project.org/package=energese)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
