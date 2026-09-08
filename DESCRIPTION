@@ -32,10 +32,11 @@ Suggests:
     purrr,
     ggforce,
     ggnewscale,
+    patchwork,
     testthat (>= 3.0.0),
     knitr,
     rmarkdown
 Config/testthat/edition: 3
 VignetteBuilder: knitr
-URL: https://github.com/ericscheier/energese, https://ericscheier.github.io/energese/
+URL: https://energese.org, https://github.com/ericscheier/energese
 BugReports: https://github.com/ericscheier/energese/issues

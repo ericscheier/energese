@@ -6,6 +6,16 @@ template:
     base_font: {google: "Source Sans Pro"}
     heading_font: {google: "Source Sans Pro"}
     code_font: {google: "Fira Mono"}
+  opengraph:
+    image:
+      src: man/figures/README-reference.png
+      alt: "The ten canonical Odum ESL symbols rendered as ggplot2 layers"
+    twitter:
+      card: summary_large_image
+      creator: "@ericscheier"
+
+figures:
+  bg: "#f3f8f3"
 
 navbar:
   structure:

@@ -1,5 +1,7 @@
 #' energese: ggplot2 Layers for H.T. Odum's Energy Systems Language
 #'
+#' \if{html}{\figure{README-reference.png}{options: width="90\%" alt="The ten canonical Odum ESL symbols rendered as ggplot2 layers"}}
+#'
 #' Provides grammar-of-graphics ggplot2 layers for H.T. Odum's Energy
 #' Systems Language (ESL) — also known as **Energese**, *Energy
 #' Circuit Language*, or *Generic Systems Symbols*. Odum developed

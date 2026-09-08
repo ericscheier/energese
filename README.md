@@ -1,4 +1,6 @@
-# energese · ggplot2 layers for H.T. Odum's Energy Systems Language
+# energese <img src="man/figures/logo.png" align="right" height="120" alt="energese hex sticker" />
+
+*ggplot2 layers for H.T. Odum's Energy Systems Language*
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/ericscheier/energese/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ericscheier/energese/actions/workflows/R-CMD-check.yaml)
@@ -97,7 +99,11 @@ ggplot(d, aes(x = x, y = y)) +
   theme_void()
 ```
 
+![The ten canonical Odum ESL symbols composed on one canvas](man/figures/README-strip.png)
+
 ## Design
+
+![Grammar: one row of data → odum_producer() returns vertices → geom_polygon() draws the shape](man/figures/README-grammar.png)
 
 Under the hood each `geom_odum_*` extends `ggplot2::GeomPolygon` and
 uses an internal `.expand_odum()` helper to convert each row of data

@@ -61,6 +61,50 @@ Each symbol has a specific meaning in Odum's framework:
   drawn with money flow going in the *opposite* direction of energy
   flow (dashed connecting lines).
 
+Here is one of each rendered as a facet grid — a legend for the
+bullets above:
+
+```{r symbol-semantics-grid, fig.width = 10, fig.height = 4}
+library(ggplot2)
+library(energese)
+
+sym <- data.frame(
+  role = factor(c("source", "flow", "storage", "consumer", "interaction",
+                   "producer", "switch", "self_limiter", "heat_sink",
+                   "transaction"),
+                 levels = c("source", "flow", "storage", "consumer",
+                             "interaction", "producer", "switch",
+                             "self_limiter", "heat_sink", "transaction")),
+  x = 0, y = 0)
+
+# Draw each symbol in its own panel
+draw_one <- function(r) {
+  base <- ggplot(sym[sym$role == r, ], aes(x, y))
+  layer <- switch(r,
+    source        = geom_odum_source     (radius = 0.4),
+    flow          = geom_odum_flow       (width = 1.2, height = 0.6),
+    storage       = geom_odum_storage    (width = 1.0, height = 0.8),
+    consumer      = geom_odum_consumer   (width = 1.0, height = 0.8),
+    interaction   = geom_odum_interaction(width = 1.0, height = 0.8),
+    producer      = geom_odum_producer   (width = 1.1, height = 0.8),
+    switch        = geom_odum_switch     (width = 0.9, height = 0.8),
+    self_limiter  = geom_odum_self_limiter(width = 0.75, height = 0.9),
+    heat_sink     = geom_odum_heat_sink  (width = 0.6, height = 0.9),
+    transaction   = geom_odum_transaction(width = 1.4, height = 0.5))
+  base + layer +
+    coord_fixed(xlim = c(-1, 1), ylim = c(-1, 1)) +
+    labs(title = r) +
+    theme_void(base_size = 9) +
+    theme(plot.title = element_text(hjust = 0.5, size = 10,
+                                     colour = "#176b17"))
+}
+
+# 10 panels via patchwork
+suppressPackageStartupMessages(library(patchwork))
+Reduce(`+`, lapply(levels(sym$role), draw_one)) +
+  plot_layout(ncol = 5)
+```
+
 ## Composing a simple ecosystem diagram
 
 Sun → producer (autotroph) → consumer (herbivore) → consumer
@@ -201,6 +245,27 @@ The two multi-part symbols return their sub-shapes distinguished by
 ```{r}
 head(odum_switch(cx = 0, cy = 0, w = 1, h = 1, id = "sw"), 4)
 ```
+
+And drawn: the vertex tibble becomes the polygon.
+
+```{r helper-render, fig.width = 8, fig.height = 3}
+verts <- rbind(
+  transform(odum_storage(-3, 0, 1.2, 1.0, id = 1), role = "storage"),
+  transform(odum_switch (   0, 0, 1.0, 1.0, id = 2), role = "switch"),
+  transform(odum_producer( 3, 0, 1.4, 1.0, id = 3), role = "producer"))
+ggplot(verts, aes(x, y, group = id, fill = role)) +
+  geom_polygon(colour = "black", linewidth = 0.3) +
+  coord_fixed() +
+  scale_fill_manual(values = c(storage = "#1F77B4",
+                                switch  = "#607D8B",
+                                producer = "#2E7D32"),
+                     guide = "none") +
+  theme_void()
+```
+
+The `switch` polygon is two triangles emitted as one `id` — draw them
+as a single `geom_polygon()` layer and ggplot will keep the outline
+from crossing.
 
 ## Prior art
 

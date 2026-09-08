@@ -6,14 +6,16 @@
 \alias{energese-package}
 \title{energese: ggplot2 Layers for H.T. Odum's Energy Systems Language}
 \description{
+\if{html}{\figure{README-reference.png}{options: width="90\%" alt="The ten canonical Odum ESL symbols rendered as ggplot2 layers"}}
+}
+\details{
 Provides grammar-of-graphics ggplot2 layers for H.T. Odum's Energy
 Systems Language (ESL) — also known as \strong{Energese}, \emph{Energy
 Circuit Language}, or \emph{Generic Systems Symbols}. Odum developed
 the language in the 1950s during tropical-forest studies at El
 Verde, Puerto Rico (Odum & Pigeon 1970, funded by the U.S. Atomic
 Energy Commission).
-}
-\details{
+
 Every canonical symbol on Wikipedia's Energese reference chart
 (\url{https://commons.wikimedia.org/wiki/File:Energese.jpg}) is
 exposed:

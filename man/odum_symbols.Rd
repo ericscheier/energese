@@ -99,3 +99,81 @@ inside a ggplot pipeline.
 Geometry follows Wikipedia's canonical reference chart
 (\url{https://commons.wikimedia.org/wiki/File:Energese.jpg}).
 }
+\examples{
+library(ggplot2)
+
+# Each helper returns a vertex tibble that geom_polygon() draws.
+
+# Circle (source, money) — parameterised by centre + radius
+verts <- odum_circle(cx = 0, cy = 0, r = 0.5, id = 1)
+ggplot(verts, aes(x, y, group = id)) +
+  geom_polygon(fill = "#F1C40F", colour = "black") +
+  coord_fixed() + theme_void()
+
+# Bertalanffy storage
+ggplot(odum_storage(0, 0, 1, 0.8, id = 1),
+       aes(x, y, group = id)) +
+  geom_polygon(fill = "#1F77B4", colour = "black") +
+  coord_fixed() + theme_void()
+
+# Hexagonal consumer
+ggplot(odum_consumer(0, 0, 1, 0.9, id = 1),
+       aes(x, y, group = id)) +
+  geom_polygon(fill = "#C0392B", colour = "black") +
+  coord_fixed() + theme_void()
+
+# Chevron interaction
+ggplot(odum_interaction(0, 0, 1, 0.8, id = 1),
+       aes(x, y, group = id)) +
+  geom_polygon(fill = "#F39C12", colour = "black") +
+  coord_fixed() + theme_void()
+
+# Bullet producer
+ggplot(odum_producer(0, 0, 1.2, 0.8, id = 1),
+       aes(x, y, group = id)) +
+  geom_polygon(fill = "#2E7D32", colour = "black") +
+  coord_fixed() + theme_void()
+
+# Bowtie switch — two triangles emitted as distinct groups
+ggplot(odum_switch(0, 0, 1, 0.8, id = 1),
+       aes(x, y, group = id)) +
+  geom_polygon(fill = "#607D8B", colour = "black") +
+  coord_fixed() + theme_void()
+
+# Semi-circular self-limiter
+ggplot(odum_self_limiter(0, 0, 0.8, 0.8, id = 1),
+       aes(x, y, group = id)) +
+  geom_polygon(fill = "#c62828", colour = "black") +
+  coord_fixed() + theme_void()
+
+# Heat sink (down-arrow + ground line — multi-group)
+ggplot(odum_heat_sink(0, 0, 0.6, 0.9, id = 1),
+       aes(x, y, group = id)) +
+  geom_polygon(fill = "#455a64", colour = "black") +
+  coord_fixed() + theme_void()
+
+# Elongated diamond transaction
+ggplot(odum_transaction(0, 0, 1.4, 0.5, id = 1),
+       aes(x, y, group = id)) +
+  geom_polygon(fill = "#b5791b", colour = "black") +
+  coord_fixed() + theme_void()
+
+# Bare-arrow flow
+ggplot(odum_flow(0, 0, 1.2, 0.5, id = 1),
+       aes(x, y, group = id)) +
+  geom_polygon(fill = "grey30", colour = "black") +
+  coord_fixed() + theme_void()
+
+# Compose several helpers by rbind()-ing vertex tibbles.
+verts <- rbind(
+  transform(odum_source  (1, 0, 0.3, id = 1), role = "source"),
+  transform(odum_producer(3, 0, 0.8, 0.6, id = 2), role = "producer"),
+  transform(odum_consumer(5, 0, 0.8, 0.6, id = 3), role = "consumer"))
+ggplot(verts, aes(x, y, group = id, fill = role)) +
+  geom_polygon(colour = "black") +
+  coord_fixed() + theme_void() +
+  scale_fill_manual(values = c(source = "#F1C40F",
+                               producer = "#2E7D32",
+                               consumer = "#8B4513"))
+
+}
