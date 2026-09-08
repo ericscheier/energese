@@ -1,4 +1,6 @@
-# energese · ggplot2 layers for H.T. Odum’s Energy Systems Language
+# energese
+
+*ggplot2 layers for H.T. Odum’s Energy Systems Language*
 
 ![Reference chart: all ten canonical Odum ESL symbols rendered as
 ggplot2 layers](reference/figures/README-reference.png)
@@ -103,7 +105,18 @@ ggplot(d, aes(x = x, y = y)) +
   theme_void()
 ```
 
+![The ten canonical Odum ESL symbols composed on one
+canvas](reference/figures/README-strip.png)
+
+The ten canonical Odum ESL symbols composed on one canvas
+
 ## Design
+
+![Grammar: one row of data → odum_producer() returns vertices →
+geom_polygon() draws the shape](reference/figures/README-grammar.png)
+
+Grammar: one row of data → odum_producer() returns vertices →
+geom_polygon() draws the shape
 
 Under the hood each `geom_odum_*` extends
 [`ggplot2::GeomPolygon`](https://ggplot2.tidyverse.org/reference/Geom.html)

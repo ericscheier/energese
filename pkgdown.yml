@@ -2,8 +2,10 @@ pandoc: 3.8.3
 pkgdown: 2.2.1
 pkgdown_sha: ~
 articles:
+  case-studies: case-studies.html
   energese: energese.html
-last_built: 2026-09-08T07:50Z
+  step-by-step: step-by-step.html
+last_built: 2026-09-08T08:24Z
 urls:
   reference: https://energese.org/reference
   article: https://energese.org/articles
