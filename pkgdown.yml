@@ -3,7 +3,7 @@ pkgdown: 2.2.1
 pkgdown_sha: ~
 articles:
   energese: energese.html
-last_built: 2026-09-06T02:28Z
+last_built: 2026-09-08T07:14Z
 urls:
-  reference: https://ericscheier.github.io/energese/reference
-  article: https://ericscheier.github.io/energese/articles
+  reference: https://pkg.energese.org/reference
+  article: https://pkg.energese.org/articles
