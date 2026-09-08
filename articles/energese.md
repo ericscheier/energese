@@ -14,7 +14,7 @@ general introduction.
 Wikipedia’s canonical [Energese reference
 chart](https://commons.wikimedia.org/wiki/File:Energese.jpg) shows every
 ESL symbol Odum used.
-[`plot_energese_reference()`](https://pkg.energese.org/reference/plot_energese_reference.md)
+[`plot_energese_reference()`](https://energese.org/reference/plot_energese_reference.md)
 renders the same chart directly from R:
 
 ``` r

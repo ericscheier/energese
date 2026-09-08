@@ -11,38 +11,38 @@ the 1950s during tropical-forest studies at El Verde, Puerto Rico (Odum
 Every canonical symbol on Wikipedia's Energese reference chart
 (<https://commons.wikimedia.org/wiki/File:Energese.jpg>) is exposed:
 
-- [`geom_odum_source()`](https://pkg.energese.org/reference/geom_odum.md)
-  — circle (renewable / external input)
+- [`geom_odum_source()`](https://energese.org/reference/geom_odum.md) —
+  circle (renewable / external input)
 
-- [`geom_odum_flow()`](https://pkg.energese.org/reference/geom_odum.md)
-  — bare arrow (generic flow)
+- [`geom_odum_flow()`](https://energese.org/reference/geom_odum.md) —
+  bare arrow (generic flow)
 
-- [`geom_odum_storage()`](https://pkg.energese.org/reference/geom_odum.md)
-  — Bertalanffy module
+- [`geom_odum_storage()`](https://energese.org/reference/geom_odum.md) —
+  Bertalanffy module
 
-- [`geom_odum_consumer()`](https://pkg.energese.org/reference/geom_odum.md)
+- [`geom_odum_consumer()`](https://energese.org/reference/geom_odum.md)
   — hexagon (consumer)
 
-- [`geom_odum_interaction()`](https://pkg.energese.org/reference/geom_odum.md)
+- [`geom_odum_interaction()`](https://energese.org/reference/geom_odum.md)
   — chevron (multiplicative junction)
 
-- [`geom_odum_producer()`](https://pkg.energese.org/reference/geom_odum.md)
+- [`geom_odum_producer()`](https://energese.org/reference/geom_odum.md)
   — bullet (autocatalytic producer)
 
-- [`geom_odum_switch()`](https://pkg.energese.org/reference/geom_odum.md)
-  — bowtie (logic gate)
+- [`geom_odum_switch()`](https://energese.org/reference/geom_odum.md) —
+  bowtie (logic gate)
 
-- [`geom_odum_self_limiter()`](https://pkg.energese.org/reference/geom_odum.md)
+- [`geom_odum_self_limiter()`](https://energese.org/reference/geom_odum.md)
   — semi-circle (saturating unit)
 
-- [`geom_odum_heat_sink()`](https://pkg.energese.org/reference/geom_odum.md)
+- [`geom_odum_heat_sink()`](https://energese.org/reference/geom_odum.md)
   — down-arrow + ground line (heat sink)
 
-- [`geom_odum_transaction()`](https://pkg.energese.org/reference/geom_odum.md)
+- [`geom_odum_transaction()`](https://energese.org/reference/geom_odum.md)
   — elongated diamond (money transaction)
 
 See
-[`plot_energese_reference()`](https://pkg.energese.org/reference/plot_energese_reference.md)
+[`plot_energese_reference()`](https://energese.org/reference/plot_energese_reference.md)
 for a single function that reproduces Wikipedia's canonical chart.
 
 Two APIs are exposed:
@@ -53,8 +53,8 @@ Two APIs are exposed:
   pipeline like any other ggplot2 layer.
 
 - **Low-level** — vertex-tibble helpers
-  ([odum_symbols](https://pkg.energese.org/reference/odum_symbols.md))
-  that return `(x, y, id)` coordinates suitable for
+  ([odum_symbols](https://energese.org/reference/odum_symbols.md)) that
+  return `(x, y, id)` coordinates suitable for
   [`ggplot2::geom_polygon()`](https://ggplot2.tidyverse.org/reference/geom_polygon.html).
   Use these when you want to hand-compose polygons, animate with
   `gganimate`, or render outside ggplot2.
@@ -69,7 +69,7 @@ TypeScript GUI editor
 also produced the Visio stencil that Wikipedia's Energese chart is based
 on), and static SVG reference libraries from the UF Center for
 Environmental Policy. See the vignette
-([`vignette("energese")`](https://pkg.energese.org/articles/energese.md))
+([`vignette("energese")`](https://energese.org/articles/energese.md))
 for a full worked example and prior-art scan.
 
 ## References

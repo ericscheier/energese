@@ -3,7 +3,7 @@
 Low-level tibble-returning functions that compute polygon vertices for
 each of H.T. Odum's Energy Systems Language (ESL) symbols. Used
 internally by the
-[`geom_odum_source()`](https://pkg.energese.org/reference/geom_odum.md)
+[`geom_odum_source()`](https://energese.org/reference/geom_odum.md)
 family; also exported for users who want to hand-compose
 [`ggplot2::geom_polygon()`](https://ggplot2.tidyverse.org/reference/geom_polygon.html)
 layers, animate with `gganimate`, or render outside ggplot2.
@@ -25,7 +25,7 @@ Returns a data.frame with TWO groups: the down-arrow polygon and the
 horizontal ground line as a separate row-set (id column distinguishes
 them). Users can render together with a single `geom_polygon` +
 `geom_segment`, or use
-[`geom_odum_heat_sink()`](https://pkg.energese.org/reference/geom_odum.md)
+[`geom_odum_heat_sink()`](https://energese.org/reference/geom_odum.md)
 which wraps both.
 
 Money flows in the opposite direction of energy in Odum's ESL, so this
@@ -37,8 +37,8 @@ returned tibble is the diamond body; the caller adds a
 Wikipedia's chart shows this as a lone right-pointing arrow. This helper
 returns the arrow polygon (shaft + triangular head) for drawing with
 `geom_polygon`; use
-[`geom_odum_flow()`](https://pkg.energese.org/reference/geom_odum.md) to
-add it inside a ggplot pipeline.
+[`geom_odum_flow()`](https://energese.org/reference/geom_odum.md) to add
+it inside a ggplot pipeline.
 
 ## Usage
 

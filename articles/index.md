@@ -3,4 +3,4 @@
 ### All vignettes
 
 - [Getting started with
-  energese](https://pkg.energese.org/articles/energese.md):
+  energese](https://energese.org/articles/energese.md):

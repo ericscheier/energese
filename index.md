@@ -16,16 +16,16 @@ as a proper `ggplot2` layer:
 
 | Symbol | Purpose | Function |
 |----|----|----|
-| Circle | Source (renewable / external input) | [`geom_odum_source()`](https://pkg.energese.org/reference/geom_odum.md) |
-| Arrow | Generic flow | [`geom_odum_flow()`](https://pkg.energese.org/reference/geom_odum.md) |
-| Bertalanffy module | Storage (flat top, rounded bottom) | [`geom_odum_storage()`](https://pkg.energese.org/reference/geom_odum.md) |
-| Hexagon | Consumer | [`geom_odum_consumer()`](https://pkg.energese.org/reference/geom_odum.md) |
-| Chevron | Interaction (multiplicative junction) | [`geom_odum_interaction()`](https://pkg.energese.org/reference/geom_odum.md) |
-| Bullet | Autocatalytic producer | [`geom_odum_producer()`](https://pkg.energese.org/reference/geom_odum.md) |
-| Bowtie | Switch (on/off logic gate) | [`geom_odum_switch()`](https://pkg.energese.org/reference/geom_odum.md) |
-| Semi-circle | Self-limiter (saturating unit) | [`geom_odum_self_limiter()`](https://pkg.energese.org/reference/geom_odum.md) |
-| Down-arrow + line | Heat sink (dispersed energy) | [`geom_odum_heat_sink()`](https://pkg.energese.org/reference/geom_odum.md) |
-| Elongated diamond | Money transaction | [`geom_odum_transaction()`](https://pkg.energese.org/reference/geom_odum.md) |
+| Circle | Source (renewable / external input) | [`geom_odum_source()`](https://energese.org/reference/geom_odum.md) |
+| Arrow | Generic flow | [`geom_odum_flow()`](https://energese.org/reference/geom_odum.md) |
+| Bertalanffy module | Storage (flat top, rounded bottom) | [`geom_odum_storage()`](https://energese.org/reference/geom_odum.md) |
+| Hexagon | Consumer | [`geom_odum_consumer()`](https://energese.org/reference/geom_odum.md) |
+| Chevron | Interaction (multiplicative junction) | [`geom_odum_interaction()`](https://energese.org/reference/geom_odum.md) |
+| Bullet | Autocatalytic producer | [`geom_odum_producer()`](https://energese.org/reference/geom_odum.md) |
+| Bowtie | Switch (on/off logic gate) | [`geom_odum_switch()`](https://energese.org/reference/geom_odum.md) |
+| Semi-circle | Self-limiter (saturating unit) | [`geom_odum_self_limiter()`](https://energese.org/reference/geom_odum.md) |
+| Down-arrow + line | Heat sink (dispersed energy) | [`geom_odum_heat_sink()`](https://energese.org/reference/geom_odum.md) |
+| Elongated diamond | Money transaction | [`geom_odum_transaction()`](https://energese.org/reference/geom_odum.md) |
 
 Each takes standard ggplot2 aesthetics (`x`, `y`, `fill`, `colour`,
 `alpha`, `linewidth`) plus a geometry aesthetic (`width` + `height` for
@@ -49,7 +49,7 @@ remotes::install_github("ericscheier/energese")
 ## Reproducing the Wikipedia Energese chart
 
 The package ships with
-[`plot_energese_reference()`](https://pkg.energese.org/reference/plot_energese_reference.md)
+[`plot_energese_reference()`](https://energese.org/reference/plot_energese_reference.md)
 — a single function that draws every canonical Odum ESL symbol in the
 same top-to-bottom layout as Wikipedia’s reference chart. This is the
 “does the package actually let you produce these diagrams” proof:
@@ -106,18 +106,18 @@ sub-parts as distinct `group` values so outlines don’t self-cross.
 For users who want direct access to the polygon coordinates (e.g. for
 `gganimate` `transition_states` or non-ggplot renderers), the low-level
 vertex helpers are also exported:
-[`odum_circle()`](https://pkg.energese.org/reference/odum_symbols.md),
-[`odum_source()`](https://pkg.energese.org/reference/odum_symbols.md),
-[`odum_flow()`](https://pkg.energese.org/reference/odum_symbols.md),
-[`odum_storage()`](https://pkg.energese.org/reference/odum_symbols.md),
-[`odum_consumer()`](https://pkg.energese.org/reference/odum_symbols.md),
-[`odum_interaction()`](https://pkg.energese.org/reference/odum_symbols.md),
-[`odum_producer()`](https://pkg.energese.org/reference/odum_symbols.md),
-[`odum_switch()`](https://pkg.energese.org/reference/odum_symbols.md),
-[`odum_self_limiter()`](https://pkg.energese.org/reference/odum_symbols.md),
-[`odum_heat_sink()`](https://pkg.energese.org/reference/odum_symbols.md),
-[`odum_transaction()`](https://pkg.energese.org/reference/odum_symbols.md),
-[`odum_money()`](https://pkg.energese.org/reference/odum_symbols.md).
+[`odum_circle()`](https://energese.org/reference/odum_symbols.md),
+[`odum_source()`](https://energese.org/reference/odum_symbols.md),
+[`odum_flow()`](https://energese.org/reference/odum_symbols.md),
+[`odum_storage()`](https://energese.org/reference/odum_symbols.md),
+[`odum_consumer()`](https://energese.org/reference/odum_symbols.md),
+[`odum_interaction()`](https://energese.org/reference/odum_symbols.md),
+[`odum_producer()`](https://energese.org/reference/odum_symbols.md),
+[`odum_switch()`](https://energese.org/reference/odum_symbols.md),
+[`odum_self_limiter()`](https://energese.org/reference/odum_symbols.md),
+[`odum_heat_sink()`](https://energese.org/reference/odum_symbols.md),
+[`odum_transaction()`](https://energese.org/reference/odum_symbols.md),
+[`odum_money()`](https://energese.org/reference/odum_symbols.md).
 
 ## Prior art
 
@@ -131,7 +131,7 @@ peers:
   — TypeScript GUI drag-and-drop editor, no data binding. Sholto Maud
   also produced the Visio stencil that Wikipedia’s Energese chart is
   based on — the same chart this package’s
-  [`plot_energese_reference()`](https://pkg.energese.org/reference/plot_energese_reference.md)
+  [`plot_energese_reference()`](https://energese.org/reference/plot_energese_reference.md)
   reproduces programmatically.
 - **[University of Florida
   CEP](https://cep.ees.ufl.edu/emergy/resources/symbols_diagrams.shtml)**
