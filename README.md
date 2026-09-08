@@ -8,6 +8,8 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
 
+![Reference chart: all ten canonical Odum ESL symbols rendered as ggplot2 layers](man/figures/README-reference.png)
+
 **energese** provides `ggplot2` layers for H.T. Odum's *Energy
 Systems Language* (ESL) — also known as **Energese**, *Energy Circuit
 Language*, or *Generic Systems Symbols* — a visual vocabulary of ten
@@ -17,6 +19,8 @@ funded by the U.S. Atomic Energy Commission) and formalised in later
 systems-ecology work. See the
 [Wikipedia article](https://en.wikipedia.org/wiki/Energy_systems_language)
 for a general introduction.
+
+![A minimal solar-food-web diagram: Sun → Grass → Grazers → Predators, Decomposers on the side, each dumping heat](man/figures/README-foodweb.png)
 
 Every canonical ESL symbol on Wikipedia's
 [Energese reference chart](https://commons.wikimedia.org/wiki/File:Energese.jpg)
