@@ -162,8 +162,8 @@ peers:
 - **[University of Florida
   CEP](https://cep.ees.ufl.edu/emergy/resources/symbols_diagrams.shtml)**
   - [International Society for the Advancement of Emergy
-    Research](http://www.emergysociety.com/esl-symbols/) — reference SVG
-    images, not programmatic stencils.
+    Research](https://www.emergysociety.com/esl-symbols/) — reference
+    SVG images, not programmatic stencils.
 
 `energese` fills the gap: programmatic, data-bindable Odum ESL layers in
 R’s grammar of graphics.
@@ -183,9 +183,9 @@ ecological-economics theory built on:
   raw sunlight (1 sej/J) up through fuels, food, and information.
 
 If you need to compute those quantities from real fuel-mix and household
-data, see the sibling package
-[emburdensynth](https://github.com/ericscheier/emburdensynth), which
-uses `energese` for diagrams and provides its own emergy pipeline.
+data, see the sibling package [emburden
+ecosystem](https://emburden.org), which uses `energese` for diagrams and
+provides its own emergy pipeline.
 
 ## Citation
 

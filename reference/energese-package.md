@@ -1,7 +1,6 @@
 # energese: ggplot2 Layers for H.T. Odum's Energy Systems Language
 
-![The ten canonical Odum ESL symbols rendered as ggplot2
-layers](figures/README-reference.png)
+![](figures/README-reference.png)
 
 ## Details
 
@@ -99,4 +98,4 @@ Language](https://en.wikipedia.org/wiki/Energy_systems_language).
 
 ## Author
 
-**Maintainer**: Eric Scheier <hello@emrgi.com>
+**Maintainer**: Eric Scheier <info@emburden.org>
