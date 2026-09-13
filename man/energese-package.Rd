@@ -6,7 +6,7 @@
 \alias{energese-package}
 \title{energese: ggplot2 Layers for H.T. Odum's Energy Systems Language}
 \description{
-\if{html}{\figure{README-reference.png}{options: width="90\%" alt="The ten canonical Odum ESL symbols rendered as ggplot2 layers"}}
+\if{html}{\figure{README-reference.png}{options: width="90\%"}}
 }
 \details{
 Provides grammar-of-graphics ggplot2 layers for H.T. Odum's Energy
@@ -85,7 +85,7 @@ The Wikipedia article on
 Systems Language}.
 }
 \author{
-\strong{Maintainer}: Eric Scheier \email{hello@emrgi.com}
+\strong{Maintainer}: Eric Scheier \email{info@emburden.org}
 
 }
 \keyword{internal}

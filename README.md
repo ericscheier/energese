@@ -138,7 +138,7 @@ library. The closest peers:
   based on — the same chart this package's
   `plot_energese_reference()` reproduces programmatically.
 * **[University of Florida CEP](https://cep.ees.ufl.edu/emergy/resources/symbols_diagrams.shtml)**
-  + [International Society for the Advancement of Emergy Research](http://www.emergysociety.com/esl-symbols/)
+  + [International Society for the Advancement of Emergy Research](https://www.emergysociety.com/esl-symbols/)
   — reference SVG images, not programmatic stencils.
 
 `energese` fills the gap: programmatic, data-bindable Odum ESL layers
@@ -162,7 +162,7 @@ of ecological-economics theory built on:
 
 If you need to compute those quantities from real fuel-mix and
 household data, see the sibling package
-[emburdensynth](https://github.com/ericscheier/emburdensynth), which
+[emburden ecosystem](https://emburden.org), which
 uses `energese` for diagrams and provides its own emergy pipeline.
 
 ## Citation

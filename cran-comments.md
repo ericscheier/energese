@@ -1,42 +1,31 @@
-# cran-comments.md
-
-## Release summary
-
-energese 0.1.0 — initial CRAN submission.
-
-energese adds ggplot2 layers for the seven canonical symbols of
-H.T. Odum's Energy Systems Language (source circles, producer
-bullet-nosed hexagons, consumer hexagons, storage bullet-tanks,
-interaction diamonds, heat-sink triangles, money transaction
-nodes). To the author's knowledge this is the first
-grammar-of-graphics R (or Python) implementation of ESL — a visual
-vocabulary widely used across systems ecology and emergy accounting
-since Odum 1971.
-
 ## Test environments
+* Local: Linux x86_64, R 4.4.x
+* R-hub via `rhub::check_for_cran()`: TBD
+* win-builder (devel + release): TBD via `devtools::check_win_devel()`
 
-* Local: Ubuntu 22.04, R 4.3.x
-* R-hub (planned): Windows Server, macOS, Ubuntu-devel
-* win-builder (planned): R-devel + R-release
+## R CMD check --as-cran
 
-## R CMD check results
+0 errors | 0 warnings | 3 notes
 
-0 errors ✓
-0 warnings ✓
-0 notes ✓ (or: 1 note re: new submission)
-
-## Downstream dependencies
-
-None (this is a new package).
-
-## Prior art / novelty
-
-Deep scan of CRAN, GitHub, PyPI, and the biennial *Emergy Synthesis*
-proceedings found no other grammar-of-graphics ESL library. Closest
-peers are the abandoned Java EmSim (an ODE integrator, no rendering)
-and the TypeScript GUI editor sholtomaud/odum-energy-language.
-Details in the vignette + README.
+Notes:
+1. New submission — first release of the package.
+2. `checking for future file timestamps ... unable to verify current time` —
+   NTP unreachable from the local build environment; harmless on CRAN
+   infrastructure.
+3. `checking HTML validation: no command 'tidy' found` — `tidy` not
+   installed locally; CRAN infrastructure has it.
 
 ## Reverse dependencies
 
-None (new package).
+None (first release).
+
+## Notes
+
+- The package provides ggplot2 Geoms for H.T. Odum's Energy Systems
+  Language (ESL). All 10 canonical symbols per the Wikipedia
+  reference chart are implemented as `geom_odum_*` layers.
+- No modifications to global state (options, par(), env vars) in
+  examples or tests.
+- All examples run in under a second each.
+- README + vignette figures are pre-rendered (in `man/figures/`) so
+  the package builds without a live plotting device.

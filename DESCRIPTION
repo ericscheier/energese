@@ -2,7 +2,7 @@ Package: energese
 Title: ggplot2 Layers for H.T. Odum's Energy Systems Language
 Version: 0.1.0
 Authors@R:
-    person("Eric", "Scheier", email = "hello@emrgi.com", role = c("aut", "cre"))
+    person("Eric", "Scheier", email = "info@emburden.org", role = c("aut", "cre"))
 Description: Provides grammar-of-graphics 'ggplot2' layers for the ten
     canonical symbols of H.T. Odum's Energy Systems Language (ESL) —
     also known as Energese: source circles, generic-flow arrows,
