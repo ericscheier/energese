@@ -5,15 +5,18 @@
 
 ## R CMD check --as-cran
 
-0 errors | 0 warnings | 3 notes
+0 errors | 1 warning | 1 note
 
-Notes:
-1. New submission — first release of the package.
-2. `checking for future file timestamps ... unable to verify current time` —
-   NTP unreachable from the local build environment; harmless on CRAN
-   infrastructure.
-3. `checking HTML validation: no command 'tidy' found` — `tidy` not
-   installed locally; CRAN infrastructure has it.
+Warning:
+1. `'qpdf' is needed for checks on size reduction of PDFs` — `qpdf`
+   is not installed in the local build environment. CRAN
+   infrastructure has it; the warning is expected to disappear on
+   CRAN's own check farm.
+
+Note:
+1. `checking for future file timestamps ... unable to verify current
+   time` — NTP unreachable from the local build environment;
+   harmless on CRAN infrastructure.
 
 ## Reverse dependencies
 
